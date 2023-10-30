@@ -1,0 +1,21 @@
+﻿@using Timer.Models.Requests;
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model UserLoginRequest
+<div class="mb-3">
+	@Html.LabelFor(m => m.Email, new {@class = "form-label"})
+	@Html.TextBoxFor(m => m.Email, new {@class = "form-control", type = "email", placeholder = "Email"})
+	@Html.ValidationMessageFor(m => m.Email)
+</div>
+
+<div class="mb-3">
+	@Html.LabelFor(m => m.Password, new {@class = "form-label"})
+	@Html.TextBoxFor(m => m.Password, new {@class = "form-control", type = "password"})
+	@Html.ValidationMessageFor(m => m.Password)
+</div>
+
+<button type="submit" class="btn btn-success" id="login-modal-button">Login</button>
+<a href="/" class="btn btn-outline-info">Return</a>

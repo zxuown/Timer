@@ -1,0 +1,21 @@
+﻿@using Timer.Models;
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model List<Time> 
+@foreach (var item in Model)
+{
+    <tr data-id="@item.Id">
+        <th>@item.Id</th>
+        <th>@item.Hours</th>
+        <th>@item.Minutes</th>
+        <th>@item.Seconds</th>
+        <th>
+
+            <button data-id="@item.Id" class="btn btn-outline-warning timer-delete">Delete</button>
+            
+        </th>
+    </tr>
+}

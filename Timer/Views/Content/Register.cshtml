@@ -1,0 +1,33 @@
+﻿@using Timer.Models.Requests;
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model UserRegistrationRequest
+<div class="mb-3">
+	@Html.LabelFor(m => m.UserName, new {@class = "form-label"})
+	@Html.TextBoxFor(m => m.UserName, new {@class = "form-control", placeholder = "Username"})
+	@Html.ValidationMessageFor(m => m.UserName)
+</div>
+
+<div class="mb-3">
+	@Html.LabelFor(m => m.Email, new {@class = "form-label"})
+	@Html.TextBoxFor(m => m.Email, new {@class = "form-control", type = "email", placeholder = "Email"})
+	@Html.ValidationMessageFor(m => m.Email)
+</div>
+
+<div class="mb-3">
+	@Html.LabelFor(m => m.Phone, new {@class = "form-label"})
+	@Html.TextBoxFor(m => m.Phone, new {@class = "form-control", type = "phone", placeholder = "Phone"})
+	@Html.ValidationMessageFor(m => m.Phone)
+</div>
+
+<div class="mb-3">
+	@Html.LabelFor(m => m.Password, new {@class = "form-label"})
+	@Html.TextBoxFor(m => m.Password, new {@class = "form-control", type = "password"})
+	@Html.ValidationMessageFor(m => m.Password)
+</div>
+
+<button type="submit" id="register-modal-button" class="btn btn-success">Register</button>
+<a href="/" class="btn btn-outline-info">Return</a>
